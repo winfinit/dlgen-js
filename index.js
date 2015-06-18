@@ -286,6 +286,7 @@
 
     		}
 
+    		var db = new Date(person.dob);
     		var db = person.dob;
     		var month = db.getMonth() + 1;
     		var day = parseInt(db.getDate());
