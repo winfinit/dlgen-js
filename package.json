@@ -26,11 +26,14 @@
     "url": "https://github.com/winfinit/dlgen-js/issues"
   },
   "dependencies": {
-	"soundex": "*"    
+    "soundex": "*"
   },
   "homepage": "https://github.com/winfinit/dlgen-js",
   "devDependencies": {
     "mocha": "^1.21.4",
     "chai": "^1.9.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }

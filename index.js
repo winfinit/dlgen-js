@@ -1,3 +1,4 @@
+//http://www.highprogrammer.com/alan/numbers/dl_us_shared.html
 (function(global) {
 
 	var Soundex = require('soundex');
