@@ -1,6 +1,6 @@
 {
   "name": "dlgen",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "State ID/Driver license generator",
   "main": "index.js",
   "scripts": {
