@@ -293,6 +293,9 @@
 		if ( YY > 100 ) {
 			YY -= 100;
 		}
+		if ( YY < 10 ) {
+			YY = "0" + YY.toString();
+		}
 
     		var gender_num = person.gender === "male" ? 0 : 500;
     		var DDD = ("000" + (((month - 1) * 40) + day + gender_num)).slice(-3);
