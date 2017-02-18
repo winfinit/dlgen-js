@@ -11,29 +11,20 @@ State ID/Drivers license number generator, (currently support only Florida)
 ## Usage
 
 ```javascript
-  dlgen.prototype.bake(<object | person>, <bool | format>);
-  // Generate ID for John Doe 
-  var dlgen = require('dlgen');
+  let {DLGenerator, DLPerson} = require('dlgen');
 
-  var formatted_id = dlgen.bake({
-     "state": "FL",
-     "firstName": "JOHN",
-     "lastName": "DOE",
-     "middleName": "",
-     "dob": new Date(1984,10,26),
-     "gender": "male" //or female
-  }, true);
-  console.log(formatted_id); /* J500-160-84-426-0 */
-
-  var raw_id = dlgen.bake({
-     "state": "FL",
-     "firstName": "JOHN",
-     "lastName": "DOE",
-     "middleName": "",
-     "dob": new Date(1984,10,26),
-     "gender": "male" //or female
+  let person = new DLPerson({
+        firstName: "DOE", 
+        lastName: "JOHN", 
+        middleName: "", 
+        dob: new Date(1984,10,26), 
+        gender: "Male"
   });
-  console.log(raw_id); /* J500160844260 */
+
+  let dlGenerator = new DLGenerator(person); 
+
+  dlGenerator.toFormattedString(); // J500-160-84-426-0
+  dlGenerator.toString(); // J500160844260
 
 ```
 
