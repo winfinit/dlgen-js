@@ -1,26 +1,27 @@
 let Soundex: any = require('soundex');
 
-export class DLPerson {
+export interface IDLPerson {
+	firstName: string;
+	lastName: string;
+	middleName: string;
+	dob: Date;
+	gender: string;
+}
+
+export class DLPerson implements IDLPerson {
 	firstName: string;
 	lastName: string;
 	middleName: string = "";
 	dob: Date;
 	gender: string;
 
-	constructor(person: Object<{
-		firstName: string, 
-		lastName: string, 
-		middleName: string, 
-		dob: Date, 
-		gender: string
-		}>) {
+	constructor(person: IDLPerson) {
 		this.firstName = person.firstName.toUpperCase();
 		this.lastName = person.lastName.toUpperCase();
 		this.middleName = person.middleName.toUpperCase();
 		this.dob = person.dob;
 		this.gender = person.gender.charAt(0).toUpperCase();
 	}
-
 }
 
 export class DLGenerator {

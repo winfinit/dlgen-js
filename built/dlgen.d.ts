@@ -1,16 +1,17 @@
-export declare class DLPerson {
+export interface IDLPerson {
     firstName: string;
     lastName: string;
     middleName: string;
     dob: Date;
     gender: string;
-    constructor(person: Object<{
-        firstName: string;
-        lastName: string;
-        middleName: string;
-        dob: Date;
-        gender: string;
-    }>);
+}
+export declare class DLPerson implements IDLPerson {
+    firstName: string;
+    lastName: string;
+    middleName: string;
+    dob: Date;
+    gender: string;
+    constructor(person: IDLPerson);
 }
 export declare class DLGenerator {
     dlPerson: DLPerson;
